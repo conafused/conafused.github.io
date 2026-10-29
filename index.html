@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>本鱼 · 个人主页</title>
+<meta name="description" content="喜欢折腾电脑、玩游戏、研究 AI 工具">
+<style>
+  :root{
+    --bg:#0b0f16;
+    --bg2:#0e1420;
+    --card:rgba(23,32,48,.72);
+    --line:rgba(130,160,210,.18);
+    --txt:#e8eef8;
+    --dim:#93a1b8;
+    --acc:#5b9cff;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;color:var(--txt);
+    font:16px/1.75 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
+    background:
+      radial-gradient(900px 500px at 15% -10%, rgba(91,156,255,.18), transparent 60%),
+      radial-gradient(700px 420px at 90% 10%, rgba(139,123,255,.14), transparent 60%),
+      linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
+    background-attachment:fixed;
+    min-height:100%;
+  }
+  .wrap{width:min(760px,100%);margin:0 auto;padding:72px 22px 60px}
+  .hero{display:flex;align-items:center;gap:22px;margin-bottom:34px}
+  .avatar{
+    width:104px;height:104px;border-radius:50%;flex:none;
+    object-fit:cover;border:2px solid var(--line);
+    background:linear-gradient(135deg,#22314c,#151d2c);
+    box-shadow:0 12px 34px rgba(0,0,0,.45);
+  }
+  .hero h1{margin:0 0 6px;font-size:30px;letter-spacing:.5px}
+  .hero .sub{color:var(--dim);font-size:15px}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:22px 24px;
+    margin-bottom:16px;
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+  }
+  .card h2{
+    margin:0 0 14px;font-size:14px;letter-spacing:2px;
+    color:var(--acc);font-weight:600;
+  }
+  .card p{margin:0 0 10px;color:#c7d2e4}
+  .card p:last-child{margin-bottom:0}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+  .tag{
+    font-size:13px;padding:5px 12px;border-radius:999px;
+    border:1px solid var(--line);color:#b9c6dc;
+    background:rgba(255,255,255,.03);
+  }
+  .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+  .link{
+    display:flex;align-items:center;gap:10px;
+    padding:12px 14px;border-radius:12px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.03);
+    color:var(--txt);text-decoration:none;
+    transition:.18s;
+  }
+  .link:hover{
+    border-color:rgba(91,156,255,.55);
+    background:rgba(91,156,255,.10);
+    transform:translateY(-2px);
+  }
+  .link .k{font-size:13px;color:var(--dim)}
+  .link .v{font-size:14px}
+  .tl{list-style:none;margin:0;padding:0}
+  .tl li{position:relative;padding-left:22px;margin-bottom:14px}
+  .tl li::before{
+    content:"";position:absolute;left:4px;top:9px;
+    width:7px;height:7px;border-radius:50%;
+    background:var(--acc);box-shadow:0 0 0 4px rgba(91,156,255,.15);
+  }
+  .tl .when{color:var(--dim);font-size:13px;margin-right:8px}
+  footer{
+    text-align:center;color:#5f6c84;font-size:13px;
+    margin-top:38px;line-height:1.9;
+  }
+  @media (max-width:560px){
+    .wrap{padding:44px 16px 40px}
+    .hero{flex-direction:column;align-items:flex-start;gap:14px}
+    .hero h1{font-size:25px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <img class="avatar" src="avatar.jpg" alt="" onerror="this.style.display='none'">
+    <div>
+      <h1>本鱼</h1>
+      <div class="sub">喜欢折腾电脑 · 玩游戏 · 研究 AI 工具</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>关于我</h2>
+    <p>喜欢折腾电脑的那类人：装系统、换硬件、调参数，看到什么有意思就想弄明白它怎么工作的。</p>
+    <p>平时玩玩游戏，也会写点 Python 小脚本，最近在玩各种 AI 工具。</p>
+    <div class="tags">
+      <span class="tag">装机 / 折腾</span>
+      <span class="tag">Python</span>
+      <span class="tag">AI 工具</span>
+      <span class="tag">游戏</span>
+      <span class="tag">随手画</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>最近在做</h2>
+    <ul class="tl">
+      <li><span class="when">2026.10</span>折腾自己的 AI 助手（DeepSeek Harness）</li>
+      <li><span class="when">2026.09</span>在学 Python 自动化，写一些小工具玩</li>
+      <li><span class="when">2026.08</span>把家里那台电脑翻新了一遍</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>联系我</h2>
+    <div class="links">
+      <a class="link" href="mailto:你的邮箱@example.com">
+        <div><div class="k">邮箱</div><div class="v">你的邮箱@example.com</div></div>
+      </a>
+      <a class="link" href="https://space.bilibili.com/你的UID" target="_blank" rel="noopener">
+        <div><div class="k">B 站</div><div class="v">@你的昵称</div></div>
+      </a>
+      <a class="link" href="https://github.com/conafused" target="_blank" rel="noopener">
+        <div><div class="k">GitHub</div><div class="v">@conafused</div></div>
+      </a>
+    </div>
+  </div>
+
+  <footer>2026 · 本鱼</footer>
+
+</div>
+</body>
+</html>
